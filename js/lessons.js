@@ -1,4 +1,149 @@
 /* Clases de profundizacion: explican el por que, un ejemplo resuelto y una practica por unidad. */
+window.START_GUIDES = {
+  ia: {
+    title: "Tu primera sesión con una herramienta de inteligencia artificial",
+    intro: "No necesitas instalar un programa para aprender los conceptos. Puedes empezar leyendo, escribiendo instrucciones y comprobando resultados. Los servicios cambian y algunos requieren cuenta; consulta sus condiciones antes de compartir información.",
+    steps: [
+      "Elige un asistente de texto o imagen disponible para ti. Revisa la edad mínima, privacidad, términos y si el uso gratuito tiene límites; no compartas contraseñas, datos personales ni información privada.",
+      "Empieza con una tarea pequeña y segura, como pedir una explicación de un concepto que ya conoces. Solicita que marque lo que no sabe y verifica una afirmación con una fuente confiable.",
+      "Para texto, indica objetivo, contexto, formato, límites y cómo comprobar la respuesta. Si no queda claro, pide una pregunta de aclaración en vez de adivinar.",
+      "Para una imagen, describe sujeto y acción; luego pose (torso, cabeza, manos), cámara y encuadre, entorno, luz y estilo. Genera, compara con tu intención y cambia una sola parte cada vez.",
+      "Guarda el prompt, el resultado y una nota sobre qué funcionó. No uses la salida sin revisión ni asumas que una respuesta convincente es verdadera."
+    ],
+    glossary: [
+      ["Modelo", "Sistema entrenado con ejemplos para producir predicciones o contenido; no es una persona ni una fuente infalible."],
+      ["Prompt", "Instrucción y contexto que le das al sistema."],
+      ["Token", "Fragmento de texto que el modelo procesa; no siempre equivale a una palabra."],
+      ["Alucinación", "Respuesta plausible pero inventada o incorrecta, que debes verificar."]
+    ],
+    resources: [
+      ["Google: Machine Learning Crash Course", "https://developers.google.com/machine-learning/crash-course", "Curso introductorio gratuito sobre ideas de aprendizaje automático; puedes comenzar por los módulos básicos."],
+      ["OpenAI: guía de ingeniería de prompts", "https://platform.openai.com/docs/guides/prompt-engineering", "Referencia de un proveedor sobre cómo estructurar instrucciones; las recomendaciones pueden variar entre modelos."]
+    ],
+    note: "La IA generativa es opcional para aprender los fundamentos. Comprueba políticas de privacidad y derechos de uso del servicio elegido; no pegues datos sensibles."
+  },
+  sdd: {
+    title: "Tu primera especificación, antes de escribir código",
+    intro: "SDD significa desarrollo guiado por especificaciones: primero haces explícito qué problema resolverás y cómo sabrás que funciona; después construyes y pruebas. No es un lenguaje de programación ni exige una herramienta especial.",
+    steps: [
+      "Crea una carpeta para tu proyecto y un documento llamado README.md o especificacion.md. Puedes escribirlo en cualquier editor de texto; Markdown es texto normal con títulos y listas.",
+      "Describe en una frase quién tiene el problema, qué necesita y por qué. Aún no elijas tecnologías ni soluciones.",
+      "Anota qué queda dentro y fuera del alcance. Divide el trabajo en comportamientos pequeños que una persona pueda comprobar.",
+      "Escribe ejemplos de aceptación con situación inicial, acción y resultado esperado. Incluye al menos un caso de error o dato faltante.",
+      "Si usas un asistente de IA para revisar la especificación, quita datos privados, pídele que señale ambigüedades y confirma cada propuesta con una persona o fuente del proyecto."
+    ],
+    glossary: [
+      ["Requisito", "Necesidad o regla que la solución debe cumplir."],
+      ["Criterio de aceptación", "Condición observable que permite decidir si un comportamiento está terminado."],
+      ["Alcance", "Qué incluye el proyecto y qué se deja fuera por ahora."],
+      ["Trazabilidad", "Relación entre una necesidad, su implementación y la prueba que la comprueba."]
+    ],
+    resources: [
+      ["Markdown Guide: sintaxis básica", "https://www.markdownguide.org/basic-syntax/", "Aprende títulos, listas y enlaces para organizar una especificación legible."],
+      ["GitHub Spec Kit", "https://github.com/github/spec-kit", "Herramientas y ejemplos abiertos para trabajar con especificaciones; es opcional y no necesitas instalarlo para este curso."],
+      ["GitHub Skills: primeros pasos", "https://skills.github.com/", "Prácticas guiadas para familiarizarte con repositorios y colaboración."]
+    ],
+    note: "Puedes completar todo el curso con documentos de texto y ejemplos a mano. Git, GitHub y asistentes de IA son apoyos, no requisitos para entender SDD."
+  },
+  java: {
+    title: "Prepara Java paso a paso (puedes elegir una ruta)",
+    intro: "Java es el lenguaje; el JDK es el kit que necesitas para crear programas. Elige primero cómo trabajarás. Si solo quieres probar conceptos, un entorno en línea puede evitar instalaciones; para aprender a ejecutar proyectos en tu computadora, sigue la ruta local.",
+    steps: [
+      "Decide tu ruta: A) entorno de Java en línea para probar ejemplos sin instalar; B) computadora con un JDK y un editor/IDE. No necesitas instalar ambas rutas para comenzar.",
+      "Si eliges la ruta local, instala un JDK LTS desde Eclipse Adoptium (Temurin) o la distribución aprobada por tu organización. Para este curso, Java 21 LTS es una opción de aprendizaje; consulta la compatibilidad de las herramientas antes de elegir otra versión.",
+      "Comprueba la instalación abriendo una terminal y ejecutando `java -version` y `javac -version`. `java` ejecuta; `javac` compila. Si el comando no se reconoce, reinicia la terminal y revisa las instrucciones de instalación de tu sistema operativo.",
+      "Escoge un editor. En Visual Studio Code instala el paquete oficial Extension Pack for Java desde la vista Extensions; VS Code es un editor que obtiene funciones de IDE mediante extensiones. IntelliJ IDEA es otra opción de IDE con herramientas Java integradas.",
+      "Crea `HolaMundo.java`, escribe una clase `HolaMundo` con `public static void main(String[] args)` e imprime `Hola, mundo`. Si usas terminal, desde esa carpeta ejecuta `javac HolaMundo.java` y luego `java HolaMundo`; si usas un IDE, crea un proyecto Java y pulsa Run.",
+      "Lee el primer mensaje de error con calma: revisa la línea, el nombre del archivo y las llaves. Cambia una cosa, vuelve a ejecutar y observa qué aprendiste."
+    ],
+    glossary: [
+      ["JDK", "Java Development Kit: herramientas para desarrollar, compilar y ejecutar programas Java. Es lo que instalas para programar localmente."],
+      ["JVM", "Java Virtual Machine: el motor que ejecuta el bytecode de Java. Normalmente no la instalas por separado; viene con un JDK."],
+      ["IDE", "Entorno de desarrollo integrado: aplicación con editor, ejecución, depuración y otras herramientas reunidas."],
+      ["Compilar", "Traducir el código fuente Java a bytecode; en la ruta básica se hace con `javac`."],
+      ["Bytecode", "Formato intermedio que la JVM puede ejecutar en diferentes sistemas."]
+    ],
+    resources: [
+      ["Eclipse Adoptium: descargar Temurin", "https://adoptium.net/temurin/releases/", "Descarga oficial del JDK. Elige tu sistema operativo y arquitectura; si no sabes cuál, consulta primero la guía de instalación de tu sistema."],
+      ["VS Code: tutorial oficial de Java", "https://code.visualstudio.com/docs/java/java-tutorial", "Pasos para preparar Java, crear un programa y ejecutarlo con Visual Studio Code."],
+      ["VS Code: extensiones Java", "https://code.visualstudio.com/docs/java/extensions", "Explica el paquete de extensiones. En VS Code abre Extensions (icono de bloques), busca “Extension Pack for Java” de Microsoft e instálalo."],
+      ["IntelliJ IDEA", "https://www.jetbrains.com/idea/download/", "Alternativa de IDE para Java. Revisa las condiciones y opciones actuales del proveedor."]
+    ],
+    note: "Visual Studio Code (VS Code) y Visual Studio son productos distintos. Para seguir este curso con Microsoft, usa VS Code y su Extension Pack for Java; no busques el paquete Java dentro de Visual Studio."
+  },
+  javascript: {
+    title: "Tu primer programa JavaScript, sin instalar nada",
+    intro: "Para las primeras prácticas basta un navegador moderno y un editor de texto. JavaScript es el lenguaje; no es lo mismo que Java. Más adelante, Node.js permite ejecutar JavaScript fuera del navegador, pero no es necesario para las primeras lecciones de esta ruta.",
+    steps: [
+      "Abre el navegador que ya usas. Abre sus herramientas de desarrollo (en muchos navegadores, F12 o clic derecho → Inspeccionar) y busca la pestaña Console/Consola.",
+      "Escribe `console.log(\"Hola, mundo\")` y pulsa Enter. La consola muestra el resultado; úsala para experimentar con expresiones pequeñas.",
+      "Para guardar un archivo, crea una carpeta y abre VS Code u otro editor. Haz un archivo `index.html` con una etiqueta `<script>` y coloca dentro tu primera instrucción JavaScript.",
+      "Guarda y abre `index.html` en el navegador; revisa la consola si algo no funciona. Cambia solo una línea por vez y actualiza la página.",
+      "Instala Node.js únicamente cuando el curso te pida ejecutar JavaScript desde una terminal o usar herramientas de proyecto. Descárgalo desde el sitio oficial y verifica `node --version` en una terminal nueva."
+    ],
+    glossary: [
+      ["Navegador", "Aplicación que abre páginas web y puede ejecutar JavaScript para que la página responda."],
+      ["Consola", "Panel de herramientas del navegador donde puedes probar instrucciones y leer mensajes."],
+      ["Editor", "Aplicación para escribir y guardar archivos de código; VS Code es una opción, no una obligación."],
+      ["Node.js", "Entorno para ejecutar JavaScript fuera del navegador; útil para proyectos y herramientas, opcional al inicio."]
+    ],
+    resources: [
+      ["MDN: primeros pasos con JavaScript", "https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting", "Lecciones gratuitas sobre cómo agregar interactividad a páginas web."],
+      ["MDN: consola del navegador", "https://developer.mozilla.org/es/docs/Web/API/console", "Referencia de `console.log` y otros mensajes para observar lo que hace el programa."],
+      ["Node.js: descargas oficiales", "https://nodejs.org/en/download", "Instalador y documentación para cuando necesites ejecutar JavaScript desde la terminal."]
+    ],
+    note: "No confundas Java con JavaScript: son lenguajes distintos. No publiques claves ni contraseñas dentro del código del navegador."
+  },
+  datos: {
+    title: "Prueba SQL con una base de datos de ejemplo",
+    intro: "SQL es el lenguaje para consultar y modificar datos organizados en tablas. Una base de datos es el lugar donde se guardan esos datos. Puedes empezar sin instalar nada con una práctica web; después elige un programa local si quieres guardar tus propios archivos.",
+    steps: [
+      "Empieza en SQLBolt o en otro entorno de práctica indicado en los recursos. Trabaja con los datos de ejemplo; no escribas información privada.",
+      "Ejecuta `SELECT 'Hola, SQL';` y observa la tabla de resultados. SQL describe qué datos quieres consultar; la base de datos realiza la consulta.",
+      "Prueba `SELECT columna FROM tabla;`. Cambia una parte a la vez y lee el mensaje de error; revisa los nombres de las tablas y columnas.",
+      "Para practicar localmente, puedes instalar DB Browser for SQLite, una interfaz visual gratuita, o SQLite desde su sitio oficial. Crea una base de datos de prueba y practica con información inventada.",
+      "Guarda tus consultas en un archivo `.sql`. Antes de modificar o borrar datos, comprueba la consulta con un `SELECT` y usa una copia de respaldo."
+    ],
+    glossary: [
+      ["Tabla", "Conjunto de datos organizado en filas y columnas, como una hoja de cálculo con reglas."],
+      ["Fila", "Un registro, por ejemplo una persona o un producto."],
+      ["Columna", "Un atributo que comparten los registros, como nombre o precio."],
+      ["SQLite", "Motor de base de datos que guarda una base completa en un archivo; útil para aprender localmente."],
+      ["Consulta", "Instrucción SQL que pide leer o cambiar datos."]
+    ],
+    resources: [
+      ["SQLBolt", "https://sqlbolt.com/", "Lecciones interactivas para practicar consultas paso a paso en el navegador."],
+      ["SQLite: documentación SQL", "https://www.sqlite.org/lang.html", "Referencia oficial del lenguaje SQL implementado por SQLite."],
+      ["DB Browser for SQLite", "https://sqlitebrowser.org/dl/", "Descarga oficial de una interfaz visual para crear y explorar bases SQLite sin empezar por la terminal."]
+    ],
+    note: "Empieza con datos ficticios. Nunca practiques consultas destructivas sobre una base de datos real sin autorización y respaldo."
+  },
+  web: {
+    title: "Tu primera página web en tres archivos",
+    intro: "Una página sencilla puede funcionar sin instalar herramientas: HTML describe el contenido, CSS define su apariencia y JavaScript agrega comportamiento. Un navegador y un editor de texto bastan para comenzar.",
+    steps: [
+      "Crea una carpeta para tu sitio y dentro tres archivos: `index.html`, `styles.css` y `script.js`. Puedes crearlos con VS Code o con un editor de texto que ya tengas.",
+      "En `index.html`, escribe la estructura mínima y agrega un título y un párrafo. HTML usa etiquetas para dar significado al contenido.",
+      "Enlaza CSS con `<link rel=\"stylesheet\" href=\"styles.css\">` dentro de `<head>` y JavaScript con `<script src=\"script.js\" defer></script>` antes de cerrar `</body>`.",
+      "Abre `index.html` en un navegador. Cambia un estilo, guarda y recarga; luego agrega `console.log(\"La página funciona\")` al archivo JavaScript y revisa la consola.",
+      "Cuando tengas varias páginas, verifica que todas las rutas sean correctas, que se lean en teléfono y que los enlaces funcionen. Para publicar un sitio estático, GitHub Pages puede servir archivos HTML, CSS y JavaScript públicos."
+    ],
+    glossary: [
+      ["HTML", "Lenguaje de marcado que organiza y da significado al contenido de la página."],
+      ["CSS", "Reglas que controlan colores, tamaños, distribución y adaptación a pantallas."],
+      ["JavaScript", "Lenguaje que permite responder a acciones y actualizar la página."],
+      ["Editor", "Programa para escribir archivos; VS Code es popular, pero hay otras opciones."],
+      ["Hosting", "Servicio que entrega los archivos del sitio a las personas que lo visitan."]
+    ],
+    resources: [
+      ["MDN: comienza a desarrollar para la web", "https://developer.mozilla.org/es/docs/Learn_web_development/Getting_started", "Ruta gratuita para quien empieza desde cero: herramientas, HTML, CSS y JavaScript."],
+      ["VS Code: documentación para principiantes", "https://code.visualstudio.com/docs/getstarted/introvideos", "Presenta el editor, carpetas, archivos y extensiones."],
+      ["GitHub Pages: guía oficial", "https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site", "Pasos para publicar un sitio estático desde un repositorio."]
+    ],
+    note: "No necesitas comprar un dominio ni instalar un framework para hacer tus primeras páginas. Nunca publiques secretos, contraseñas ni datos privados en un repositorio público."
+  }
+};
+
 window.EXTENDED_LESSONS = {
   ia: [
     { unit: 0, title: "Aprendizaje supervisado, no supervisado y por refuerzo", explanation: ["En el aprendizaje supervisado se entrena con ejemplos que ya incluyen la respuesta esperada: correos etiquetados como correo no deseado o normal. El modelo aprende a relacionar las entradas con esas etiquetas. En una aplicación real, importa saber quién etiquetó los ejemplos y qué errores son costosos.", "En el no supervisado no hay una etiqueta objetivo para cada ejemplo: se buscan agrupamientos o estructuras. El resultado depende de la representación y de qué distancia tenga sentido para el problema; un grupo matemático no es necesariamente una categoría humana real.", "En aprendizaje por refuerzo un agente recibe señales de recompensa por acciones y aprende una política para obtener mejores resultados con el tiempo. Diseñar la recompensa es delicado: optimizar una medida mal elegida puede producir comportamientos no deseados. Ningún tipo es universalmente mejor: depende de la tarea, los datos y la forma de evaluar."], example: "Clasificar fotografías con etiquetas es supervisado; descubrir grupos de imágenes sin etiquetas es no supervisado; aprender una estrategia de juego con recompensas es por refuerzo.", practice: "Elige un problema y explica qué datos, señales de evaluación y riesgos necesitaría cada enfoque." },

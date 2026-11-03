@@ -266,6 +266,22 @@
     const projectReady = Boolean(progress.projectComplete);
     const examReady = allModulesComplete && projectReady;
     const extendedLessons = EXTENDED_LESSONS[program.id] || [];
+    const startGuide = START_GUIDES[program.id];
+    const startGuideMarkup = startGuide ? `
+      <section class="start-guide" aria-labelledby="start-guide-title">
+        <div class="lesson-kicker"><span>GUÍA PARA PRINCIPIANTES</span><span>EMPIEZA AQUÍ</span></div>
+        <h2 id="start-guide-title">${escapeHtml(startGuide.title)}</h2>
+        <p>${escapeHtml(startGuide.intro)}</p>
+        <h3>Haz esto en orden</h3>
+        <ol class="start-guide-steps">${startGuide.steps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>
+        <h3>Palabras que verás en el curso</h3>
+        <dl class="start-guide-glossary">${startGuide.glossary.map(([term, meaning]) => `
+          <div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(meaning)}</dd></div>`).join("")}</dl>
+        <h3>Recursos para continuar</h3>
+        <ul class="start-guide-resources">${startGuide.resources.map(([label, url, detail]) => `
+          <li><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)} <span aria-hidden="true">↗</span></a><p>${escapeHtml(detail)}</p></li>`).join("")}</ul>
+        <p class="start-guide-note"><strong>Recuerda:</strong> ${escapeHtml(startGuide.note)}</p>
+      </section>` : "";
     const unitsMarkup = program.modules.map((module, index) => {
       const isComplete = Boolean(progress.modules[index]);
       const deepLessons = extendedLessons.filter((lesson) => lesson.unit === index);
@@ -375,6 +391,7 @@
         <div><span>UNIDADES COMPLETADAS</span><strong>${completedUnits} / ${program.modules.length}</strong></div>
       </div>
       <div class="takeaway"><span class="takeaway-label">ANTES DE EMPEZAR</span><p>${escapeHtml(program.prerequisites)}</p></div>
+      ${startGuideMarkup}
       <section class="course-overview"><h2>Al finalizar podrás</h2><ul>${program.outcomes.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></section>
       <div class="lesson-rule"></div>
       <h2 class="curriculum-title">Programa de estudios</h2>

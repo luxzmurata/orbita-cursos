@@ -1,6 +1,6 @@
 # Órbita — Cursos de tecnología
 
-Portal educativo estático, en español, creado con HTML, CSS y JavaScript sin dependencias ni proceso de compilación. Incluye seis cursos independientes con clases de profundización, ejemplos, prácticas, proyectos por etapas, rúbricas, bancos de preguntas aleatorias y una constancia privada imprimible.
+Portal educativo estático, en español, creado con HTML, CSS y JavaScript sin dependencias ni proceso de compilación. Incluye seis cursos independientes con una guía de primeros pasos y recursos para cada ruta, clases de profundización, ejemplos, prácticas, proyectos por etapas, rúbricas, bancos de preguntas aleatorias y una constancia privada imprimible.
 
 ## Estructura
 
@@ -8,7 +8,7 @@ Portal educativo estático, en español, creado con HTML, CSS y JavaScript sin d
 index.html       Estructura de la página y diálogo para la constancia
 styles.css       Diseño adaptable, accesibilidad visual y plantilla de impresión
 js/programs.js       Objetivos, módulos, proyectos, competencias y bancos de preguntas
-js/lessons.js        Clases ampliadas, ejemplos y actividades por curso
+js/lessons.js        Guías de inicio, glosarios, recursos y clases ampliadas
 js/project-guides.js Hitos, evidencia y campos del portafolio final
 js/app.js            Catálogo, evaluaciones aleatorias y progreso/portafolio local
 ```
@@ -22,7 +22,7 @@ js/app.js            Catálogo, evaluaciones aleatorias y progreso/portafolio lo
 - **Bases de datos y SQL:** modelado y normalización, consultas, joins, agregaciones, índices, transacciones, migraciones, parametrización y respaldos.
 - **Desarrollo de páginas web:** HTML semántico, formularios, CSS, responsive design, accesibilidad, JavaScript y publicación con GitHub Pages.
 
-Cada curso ofrece lecciones de profundización con una explicación, ejemplo guiado y actividad, además de un proyecto final por hitos. Cada examen selecciona cinco preguntas aleatorias: una de cada unidad y una adicional, mezclando preguntas y opciones de respuesta. El banco actual contiene catorce preguntas por curso.
+Cada curso ofrece una guía para empezar desde cero (herramientas, pasos, glosario y recursos enlazados), lecciones de profundización con una explicación, ejemplo guiado y actividad, además de un proyecto final por hitos. Java incluye rutas con y sin instalación, instrucciones para instalar el JDK y usar VS Code con el Extension Pack for Java o un IDE alternativo. JavaScript y desarrollo web se pueden comenzar con un navegador, sin instalar Node.js. Cada examen selecciona cinco preguntas aleatorias: una de cada unidad y una adicional, mezclando preguntas y opciones de respuesta. El banco actual contiene catorce preguntas por curso.
 
 ## Progreso, evaluación y constancias
 
