@@ -180,6 +180,15 @@ code { padding: 2px 5px; border: 1px solid rgba(255,255,255,.08); border-radius:
 .course-unit > h2 { margin: 11px 0 8px; font-family: var(--display); font-size: 21px; font-weight: 600; letter-spacing: -.04em; }
 .unit-objective { margin: 0 0 21px; color: #96969f; font-size: 11px; line-height: 1.8; }
 .unit-objective strong { color: #cac9cd; }
+.plain-language { margin: 0 0 20px; padding: 16px; border-left: 2px solid #c7c4ba; background: rgba(255,255,255,.045); }
+.plain-language > p { margin: 0 0 10px; color: #d0cfd3; font-size: 12px; line-height: 1.8; }
+.plain-language > p:last-of-type { margin-bottom: 0; }
+.plain-language .plain-analogy { color: #aaaab2; }
+.plain-analogy strong { color: #dedbd2; }
+.plain-terms { display: grid; gap: 6px; margin: 13px 0 0; }
+.plain-terms > div { display: grid; grid-template-columns: minmax(105px, .55fr) 1.7fr; gap: 10px; padding-top: 7px; border-top: 1px solid var(--line); }
+.plain-terms dt { color: #dedce0; font-size: 10px; font-weight: 600; }
+.plain-terms dd { margin: 0; color: #999aa3; font-size: 10px; line-height: 1.65; }
 .unit-topic { padding: 18px 0; border-top: 1px solid var(--line); }
 .deep-lesson { margin-top: 5px; padding: 17px; border: 1px solid rgba(235,236,241,.07); background: rgba(255,255,255,.018); }
 .deep-lesson-label { display: inline-block; margin-bottom: 9px; color: #888992; font-family: var(--mono); font-size: 7px; letter-spacing: .1em; }
@@ -315,6 +324,7 @@ code { padding: 2px 5px; border: 1px solid rgba(255,255,255,.08); border-radius:
   .course-facts > div { min-height: 53px; }
   .course-unit, .course-project, .course-exam, .course-overview, .skills-panel, .start-guide { padding: 15px; }
   .start-guide-glossary > div { grid-template-columns: 1fr; gap: 5px; }
+  .plain-terms > div { grid-template-columns: 1fr; gap: 4px; }
   .lesson-aside { order: -1; }
   .aside-card { position: static; }
   .aside-card ol { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 14px; }

@@ -285,6 +285,7 @@
     const unitsMarkup = program.modules.map((module, index) => {
       const isComplete = Boolean(progress.modules[index]);
       const deepLessons = extendedLessons.filter((lesson) => lesson.unit === index);
+      const plainUnit = (PLAIN_LANGUAGE[program.id] || [])[index];
       return `
         <section class="course-unit" id="unit-${index}">
           <div class="unit-heading">
@@ -293,6 +294,14 @@
           </div>
           <h2>${escapeHtml(module.title)}</h2>
           <p class="unit-objective"><strong>Objetivo de aprendizaje:</strong> ${escapeHtml(module.objective)}</p>
+          ${plainUnit ? `
+          <div class="plain-language">
+            <span class="takeaway-label">PRIMERO, EN PALABRAS COTIDIANAS</span>
+            <p>${escapeHtml(plainUnit.simple)}</p>
+            <p class="plain-analogy"><strong>Imagina esto:</strong> ${escapeHtml(plainUnit.analogy)}</p>
+            <dl class="plain-terms">${plainUnit.terms.map(([term, meaning]) => `
+              <div><dt>${escapeHtml(term)}</dt><dd>${escapeHtml(meaning)}</dd></div>`).join("")}</dl>
+          </div>` : ""}
           ${module.topics.map((topic) => `
             <div class="unit-topic">
               <h3>${escapeHtml(topic.title)}</h3>
